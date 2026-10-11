@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "X 首页粉丝数显示",
+  "version": "1.0.2",
+  "description": "在 X 首页时间线的发帖人昵称旁显示粉丝数量。",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*"
+  ],
+  "action": {
+    "default_title": "X 粉丝数显示",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*"
+      ],
+      "js": [
+        "src/page-bridge.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*"
+      ],
+      "js": [
+        "src/utils.js",
+        "src/content.js"
+      ],
+      "css": [
+        "src/content.css"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/page-bridge.js"
+      ],
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*"
+      ]
+    }
+  ]
+}
+
