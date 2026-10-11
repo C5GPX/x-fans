@@ -1,0 +1,18 @@
+.x-follower-chip {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 4px;
+  color: #1d9bf0;
+  font-size: 0.85em;
+  font-weight: 600;
+  line-height: 1.2;
+  opacity: 1;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.x-follower-chip[data-has-value="false"] {
+  color: #1d9bf0;
+  opacity: 0.65;
+}
+
