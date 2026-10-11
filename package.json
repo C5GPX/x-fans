@@ -1,0 +1,10 @@
+{
+  "name": "x-follower-count-extension",
+  "version": "1.0.2",
+  "description": "Manifest V3 extension that shows X timeline authors' follower counts.",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test --test-isolation=none"
+  }
+}
+
